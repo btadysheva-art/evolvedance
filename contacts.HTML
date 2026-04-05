@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolve Dance | Контакты и запись</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0A0E27;
+            --bg-card: #121838;
+            --neon-blue: #00D2FF;
+            --neon-pink: #FF007F;
+            --neon-purple: #7000FF;
+            --text-light: #E0E0FF;
+        }
+        body { font-family: 'Montserrat', sans-serif; background: var(--bg-dark); color: var(--text-light); }
+        .navbar { background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,210,255,0.2); }
+        .navbar-brand { background: linear-gradient(135deg, #00D2FF, #7000FF); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; }
+        .btn-neon { background: transparent; border: 2px solid var(--neon-blue); color: var(--neon-blue); border-radius: 30px; transition: 0.3s; }
+        .btn-neon:hover { background: var(--neon-blue); color: #000; box-shadow: 0 0 15px var(--neon-blue); }
+        .contact-form-card { background: var(--bg-card); border-radius: 30px; padding: 2rem; border: 1px solid var(--neon-purple); }
+        .form-control, .form-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(0,210,255,0.3); color: white; padding: 12px; border-radius: 15px; }
+        .form-control:focus { background: #0A0E27; border-color: var(--neon-pink); box-shadow: 0 0 10px var(--neon-pink); color: white; }
+        .info-card { background: linear-gradient(135deg, #121838, #0A0E27); border-radius: 20px; padding: 1.5rem; transition: 0.3s; }
+        .info-card:hover { transform: translateY(-5px); border-left: 4px solid var(--neon-blue); }
+        footer { background: #050814; margin-top: 4rem; padding: 2rem 0; border-top: 1px solid var(--neon-purple); }
+        @keyframes slideRight { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        .animate-slide { animation: slideRight 0.6s ease forwards; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">✦ EVOLVE DANCE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contacts.html">Контакты</a></li>
+            </ul>
+            <a href="contacts.html" class="btn btn-neon ms-lg-3">🔥 Записаться</a>
+        </div>
+    </div>
+</nav>
+
+<section class="container py-5 mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">📞 Свяжись с нами</h1>
+        <p>Заполни форму — и мы подберем идеальное направление для тебя</p>
+        <span class="badge bg-info bg-opacity-25 text-info p-2">* - обязательные поля</span>
+    </div>
+    <div class="row g-5">
+        <!-- Форма -->
+        <div class="col-lg-7">
+            <div class="contact-form-card">
+                <h2 class="h3 mb-4">✍️ Заявка на пробный урок</h2>
+                <form id="callbackForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Имя *</label>
+                            <input type="text" class="form-control" id="name" required placeholder="Александр">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="phone" required placeholder="+7 (900) 123-45-67">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="dancer@example.com">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Выбери направление *</label>
+                            <select class="form-select" id="direction" required>
+                                <option value="">-- Интересует --</option>
+                                <option>Hip-Hop</option>
+                                <option>Contemporary</option>
+                                <option>Jazz-Funk</option>
+                                <option>High Heels</option>
+                                <option>Детские группы (7-12 лет)</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Комментарий / Вопрос</label>
+                            <textarea class="form-control" rows="4" placeholder="Расскажи о своем опыте..."></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="agree" required>
+                                <label class="form-check-label" for="agree">Согласие на обработку персональных данных *</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-neon w-100 py-2">Отправить заявку <i class="bi bi-send"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <div class="alert alert-success mt-3 d-none" id="successMsg">Спасибо! Мы перезвоним в течение 15 минут.</div>
+            </div>
+        </div>
+        <!-- Контакты и карта -->
+        <div class="col-lg-5">
+            <div class="info-card mb-4 animate-slide">
+                <i class="bi bi-geo-alt fs-2 text-info"></i>
+                <h3 class="h5 mt-2">Адрес главной студии</h3>
+                <p>г. Томск, ул. Танцоров, д. 10, ТРЦ "Гранит", 3 этаж</p>
+                <a href="#" class="text-info">Построить маршрут <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="info-card mb-4 animate-slide" style="animation-delay: 0.1s;">
+                <i class="bi bi-telephone fs-2 text-pink" style="color: var(--neon-pink);"></i>
+                <h3 class="h5 mt-2">Телефон / WhatsApp</h3>
+                <p class="fs-5">+7 (912) 345-67-89</p>
+                <p class="small">Пн-Вс с 10:00 до 21:00</p>
+            </div>
+            <div class="info-card animate-slide" style="animation-delay: 0.2s;">
+                <i class="bi bi-calendar-week fs-2 text-warning"></i>
+                <h3 class="h5 mt-2">График работы</h3>
+                <ul class="list-unstyled">
+                    <li>ПН-ПТ: 11:00 – 22:00</li>
+                    <li>СБ-ВС: 12:00 – 20:00</li>
+                    <li>Пробные уроки: каждый вторник и четверг в 19:00</li>
+                </ul>
+            </div>
+            <div class="mt-4 p-3 rounded-3 text-center" style="background: #0A0E27; border: 1px dashed var(--neon-purple);">
+                <i class="bi bi-discord"></i> <strong>Дискорд комьюнити:</strong> @evolve_dance_tomsk
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <p class="mb-0">© 2026 EVOLVE DANCE. Черников А.П., группа 9013/2. Все танцы возможны.</p>
+        <div class="mt-2">
+            <a href="#" class="text-info me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-info me-3"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="text-info"><i class="bi bi-vk"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('callbackForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const direction = document.getElementById('direction').value;
+        if(!name || !phone || !direction) {
+            alert("Пожалуйста, заполните все обязательные поля!");
+            return;
+        }
+        document.getElementById('successMsg').classList.remove('d-none');
+        this.reset();
+        setTimeout(() => document.getElementById('successMsg').classList.add('d-none'), 4000);
+    });
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.navbar');
+        nav.style.background = window.scrollY > 50 ? 'rgba(5, 8, 20, 0.98)' : 'rgba(10, 14, 39, 0.95)';
+    });
+</script>
+</body>
+</html>
